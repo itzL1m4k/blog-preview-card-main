@@ -82,6 +82,7 @@ h2 {
 h2:hover,
 h2:focus {
   color: var(--yellow);
+  cursor: pointer;
 }
 
 #discription {
