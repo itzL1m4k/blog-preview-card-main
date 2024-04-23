@@ -11,10 +11,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Figtree', sans-serif;
+  transition: ease-in-out 0.7s;
 }
 
 body {
+  font-family: 'Figtree', sans-serif;
   background-color: var(--yellow);
   display: flex;
   justify-content: center;
@@ -36,17 +37,17 @@ body {
   border: 1px solid var(--black);
 }
 
+#illustration {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
 .footer {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-top: 20px;
-}
-
-#illustration {
-  width: 320px;
-  border-radius: 10px;
-  margin-bottom: 25px;
 }
 
 #avatar {
@@ -75,12 +76,12 @@ span {
 h2 {
   color: var(--black);
   margin-bottom: 15px;
+  transition: 0.3s;
 }
 
-h2:hover {
+h2:hover,
+h2:focus {
   color: var(--yellow);
-  transition: 0.3s;
-  cursor: pointer;
 }
 
 #discription {
@@ -89,7 +90,7 @@ h2:hover {
   line-height: 1.5em;
 }
 
-.avatar__paragraph {
+#avatar__paragraph {
   color: var(--black);
   font-weight: bold;
 }
@@ -103,4 +104,39 @@ h2:hover {
   padding: 4px;
   color: var(--black);
   font-size: 12px;
+}
+
+@media (max-width: 375px) {
+  .card {
+    width: 90%;
+    height: 100%;
+    padding: 4.5%;
+  }
+  .footer {
+    gap: 5px;
+    margin-top: 10px;
+  }
+  #illustration {
+    margin-bottom: 12.5px;
+  }
+  button {
+    padding: 2% 4%;
+  }
+  span {
+    font-size: 12px;
+    margin-bottom: 4%;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  #discription,
+  #avatar__paragraph {
+    font-size: 12.5px;
+  }
+  #avatar {
+    width: 25px;
+  }
+  .attribution {
+    font-size: 10px;
+  }
 }
